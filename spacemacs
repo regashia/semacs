@@ -40,7 +40,8 @@ values."
      auto-completion
      syntax-checking
      git
-     version-control
+     (version-control :variables
+                      version-control-diff-side 'left)
 
      emacs-lisp
      org
