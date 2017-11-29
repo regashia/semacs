@@ -313,7 +313,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; ESC ESC ESC を無効にする
-  (global-set-key (kbd "ESC ESC ESC") nil)
+  (bind-key* "ESC ESC ESC" nil)
 
   ;; Unix style C-h
   (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
@@ -326,10 +326,10 @@ you should place your code here."
     (interactive)
     (if (= (point) (progn (back-to-indentation) (point)))
         (beginning-of-line)))
-  (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
+  (bind-key* "C-a" 'back-to-indentation-or-beginning)
 
   ;; M-/ で complete
-  (global-set-key (kbd "M-/") 'company-complete)
+  (bind-key* "M-/" 'company-complete)
 
   (server-start)
   )
