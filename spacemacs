@@ -297,6 +297,9 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq vc-follow-symlinks t)
+
+  ;; Projectile は .gitignore を無視する
+  (setq projectile-git-command "git ls-files -zco")
   )
 
 (defun dotspacemacs/user-config ()
