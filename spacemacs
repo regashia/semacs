@@ -297,6 +297,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; デフォルトで symlink を辿るよう変更
   (setq vc-follow-symlinks t)
 
   ;; M-x で ^ を自動挿入しない
