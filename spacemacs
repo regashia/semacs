@@ -302,6 +302,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; M-x で ^ を自動挿入しない
   (setq ivy-initial-inputs-alist nil)
 
+  ;; Magit の表示を --color-words 風にする
+  (setq magit-diff-refine-hunk t)
+
   ;; Projectile は .gitignore を無視する
   (setq projectile-git-command "git ls-files -zco")
   )
