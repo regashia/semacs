@@ -325,6 +325,9 @@ you should place your code here."
         (beginning-of-line)))
   (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
 
+  ;; M-/ で complete
+  (global-set-key (kbd "M-/") 'company-complete)
+
   (server-start)
   )
 
