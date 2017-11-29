@@ -309,6 +309,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; ESC ESC ESC を無効にする
+  (global-set-key (kbd "ESC ESC ESC") nil)
+
   ;; Unix style C-h
   (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
   (define-key key-translation-map (kbd "M-h") (kbd "<C-backspace>"))
