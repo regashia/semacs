@@ -302,6 +302,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; M-x で ^ を自動挿入しない
   (setq ivy-initial-inputs-alist nil)
 
+  ;; 挙動がおかしいので undo-tree-visualizer-diff を無効にする
+  (setq undo-tree-visualizer-diff nil)
+
   ;; Magit の表示を --color-words 風にする
   (setq magit-diff-refine-hunk t)
 
