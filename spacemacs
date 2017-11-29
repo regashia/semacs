@@ -36,7 +36,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     ivy
      auto-completion
      syntax-checking
      git
@@ -297,6 +297,9 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq vc-follow-symlinks t)
+
+  ;; M-x で ^ を自動挿入しない
+  (setq ivy-initial-inputs-alist nil)
 
   ;; Projectile は .gitignore を無視する
   (setq projectile-git-command "git ls-files -zco")
