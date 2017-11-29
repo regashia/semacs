@@ -315,6 +315,13 @@ you should place your code here."
   (define-key key-translation-map (kbd "DEL") (kbd "C-h"))
   (define-key key-translation-map (kbd "M-DEL") (kbd "M-h"))
 
+  ;; Set C-a to back to indentation or beginning
+  (defun back-to-indentation-or-beginning ()
+    (interactive)
+    (if (= (point) (progn (back-to-indentation) (point)))
+        (beginning-of-line)))
+  (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
+
   (server-start)
   )
 
