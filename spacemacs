@@ -56,7 +56,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(editorconfig)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -343,6 +343,9 @@ you should place your code here."
     (if (= (point) (progn (back-to-indentation) (point)))
         (beginning-of-line)))
   (bind-key* "C-a" 'back-to-indentation-or-beginning)
+
+  ;; EditorConfig を有効にする
+  (editorconfig-mode)
 
   ;; M-/ で complete
   (bind-key* "M-/" 'company-complete)
