@@ -344,6 +344,12 @@ you should place your code here."
       (beginning-of-line)))
   (bind-key* "C-a" 'back-to-indentation-or-beginning)
 
+  ;; Window 分割時にカーソルを分割先に移動させる
+  (bind-key "SPC w s" 'split-window-below-and-focus evil-normal-state-local-map)
+  (bind-key "SPC w v" 'split-window-right-and-focus evil-normal-state-local-map)
+  (bind-key "SPC w S" 'split-window-below evil-normal-state-local-map)
+  (bind-key "SPC w V" 'split-window-right evil-normal-state-local-map)
+
   ;; Google translate を英中辞書にする
   (custom-set-variables
     '(google-translate-default-source-language "en")
