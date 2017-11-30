@@ -319,6 +319,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; Projectile は .gitignore を無視する
   (setq projectile-git-command "git ls-files -zco")
+
+  ;; ruby ファイルの先頭に # -*- coding: utf-8 -*- を自動挿入しない
+  (setq ruby-insert-encoding-magic-comment nil)
+  (setq enh-ruby-add-encoding-comment-on-save nil)
   )
 
 (defun dotspacemacs/user-config ()
