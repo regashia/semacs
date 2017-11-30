@@ -344,6 +344,11 @@ you should place your code here."
       (beginning-of-line)))
   (bind-key* "C-a" 'back-to-indentation-or-beginning)
 
+  ;; Google translate を英中辞書にする
+  (custom-set-variables
+    '(google-translate-default-source-language "en")
+    '(google-translate-default-target-language "zh-CN"))
+
   ;; EditorConfig を有効にする
   (editorconfig-mode)
 
