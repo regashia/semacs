@@ -311,6 +311,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; 挙動がおかしいので undo-tree-visualizer-diff を無効にする
   (setq undo-tree-visualizer-diff nil)
 
+  ;; シンタックスエラー吹き出し持続時間を 10 分にする
+  (setq flycheck-pos-tip-timeout 600)
+
   ;; Magit の表示を --color-words 風にする
   (setq magit-diff-refine-hunk t)
 
