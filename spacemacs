@@ -46,6 +46,11 @@ values."
      emacs-lisp
      org
      markdown
+     (ruby :variables
+           ruby-enable-enh-ruby-mode t
+           ruby-version-manager 'rbenv
+           ruby-test-runner 'rspec)
+     ruby-on-rails
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -338,6 +343,20 @@ you should place your code here."
 
   ;; M-/ で complete
   (bind-key* "M-/" 'company-complete)
+
+  ;; セーブ時に rubocop -a
+  (add-hook 'after-save-hook
+            (lambda()
+              (when (eq major-mode 'ruby-mode)
+                (rubocop-autocorrect-current-file))))
+  (add-hook 'after-save-hook
+            (lambda()
+              (when (eq major-mode 'enh-ruby-mode)
+                (rubocop-autocorrect-current-file))))
+
+  ;; rubocop 結果出力バッファを popwin で表示する
+  (when (require 'popwin nil t)
+    (push '("\*RuboCop /.*\*" :regexp t) popwin:special-display-config))
 
   (server-start)
   )
