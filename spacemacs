@@ -349,6 +349,9 @@ you should place your code here."
     '(google-translate-default-source-language "en")
     '(google-translate-default-target-language "zh-CN"))
 
+  ;; Google translate の結果を popwin で表示する
+  (push '("\*Google Translate\*") popwin:special-display-config)
+
   ;; EditorConfig を有効にする
   (editorconfig-mode)
 
