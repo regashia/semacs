@@ -46,6 +46,7 @@ values."
        emacs-lisp
        org
        markdown
+       yaml
        (ruby :variables
          ruby-enable-enh-ruby-mode t
          ruby-version-manager 'rbenv
